@@ -8,6 +8,8 @@ final class DeleteContact
 {
     public function handle(int $id): bool
     {
-        return Contact::findOrFail($id)->delete();
+        return Contact::query()
+            ->whereKey($id)
+            ->delete() > 0;
     }
 }
