@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app/Contact
+        - app/Models
+        - app/Providers
+
+    level: 5
+
+    scanDirectories:
+        - app/Contact/Models
